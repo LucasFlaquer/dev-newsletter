@@ -15,7 +15,6 @@ export function App() {
   const [taskId, setTaskId] = useState('')
   const { content, isLoading } = useTask({ taskId })
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const contentRef = useRef<HTMLDivElement>(null)
 
   async function handleSubmit({ topics }: FormValues) {
     const formData = new FormData()
@@ -31,12 +30,6 @@ export function App() {
     setTaskId(data.task_id)
   }
 
-  useEffect(() => {
-    if (content.length > 0 && contentRef.current !== null) {
-      contentRef.current.scrollTo({ behavior: 'smooth' })
-    }
-  }, [content])
-
   return (
     <LoadingOverlay isLoading={isLoading}>
       <div>
@@ -51,15 +44,14 @@ export function App() {
                 <NewsletterForm onSubmit={handleSubmit} />
               </NewsletterDialog>
             </div>
-          </div>
-          {content.length > 0 && (
-            <div className="text-white bg-gray-500" ref={contentRef}>
-              <div className="max-w-[1180px] mx-auto">
-                <h3 className="text-3xl">Resultado:</h3>
+
+            <div className="text-white">
+              <div className="max-w-[700px] h-[600px] overflow-y-auto  mx-auto">
                 <Markdown className="markdonw-content">{content}</Markdown>
               </div>
             </div>
-          )}
+
+          </div>
         </main>
       </div>
     </LoadingOverlay>

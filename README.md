@@ -33,3 +33,7 @@ O projeto estará disponível em http://localhost:5173/.
 - `src`: Contém o código-fonte do projeto.
 - `public`: Contém arquivos públicos estáticos.
 - `dist/`: Contém os arquivos de build para produção (gerado após `npm run build`).
+
+## Referência ao Vídeo
+
+Para mais informações, assista ao nosso [vídeo tutorial](presentation.mov).
