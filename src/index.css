@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.markdown-content p {
+  margin-bottom: 1.5rem;
+}
+.markdown-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  @apply text-3xl;
+}
+.markdown-content h3 {
+  @apply text-xl;
+}
+
+.markdown-content hr {
+  margin: 1rem;
+}
