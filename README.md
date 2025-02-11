@@ -36,4 +36,5 @@ O projeto estará disponível em http://localhost:5173/.
 
 ## Referência ao Vídeo
 
-Para mais informações, assista ao nosso [vídeo tutorial](presentation.mov).
+Para mais informações, confira a demo
+![Vídeo Tutorial](./presentation.gif)
